@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Filters</title>
+</head>
+<body>
+    <h1 id="elements"></h1>
+    <h2 id="string"></h2>
+</body>
+</html>
+<script>
+
+    var numbers=[4,7,9,2,5]
+    numbers=numbers.filter((num)=>{
+        return num>5
+    })
+    document.getElementById("elements").innerHTML=numbers;
+
+    var names=["Anshika","Kanak","Shruti"]
+    names=names.filter((name)=>{
+        return name.includes('a')
+    })
+    document.getElementById("string").innerHTML=names;
+
+</script>

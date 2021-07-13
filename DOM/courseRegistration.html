@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration</title>
+
+    <style>
+        input,label,select{
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Course Registration</h1>
+    <form onsubmit="displayData(); return false"> 
+    <input id="first_name" type="text" name="first_name" placeholder="First-Name"><br>
+    <input id="last_name" type="text" name="last_name" placeholder="Last-Name"><br>
+
+    <label>Gender</label>
+    <input  type="radio" name="gender" value="male" >Male
+    <input  type="radio" name="gender" value="female">Female<br>
+
+    <label >Select Language</label>
+    <select id="language" >
+        <option value="ruby">Ruby</option>
+        <option value="C++">C++</option>
+        <option value="JS">JS</option><br>
+    </select><br>
+
+    <label>Platform</label>
+    <input type="checkbox" value="online" id="online">Online
+    <input type="checkbox" value="offline" id="offline">Offline<br>
+
+    <button type="submit" >register</button><br>
+</form>
+
+<p id="result"></p>
+
+</body>
+</html>
+
+<script>
+
+    function displayData(){
+        var first_name=document.getElementById("first_name").value;
+        var last_name=document.getElementById("last_name").value;
+
+        var gender;
+        var genders=document.getElementsByName("gender")
+        for(var i=0;i<genders.length;i++ ){
+            if(genders[i].checked){
+                gender=genders[i].value
+            }
+        }
+
+        var language=document.getElementById("language").value
+
+        var online=document.getElementById("online");
+        var offline=document.getElementById("offline");
+
+        var platform=[];
+        if(online.checked){
+            platform.push(online.value)
+        }
+        if(offline.checked){
+            platform.push(offline.value)
+        }
+
+        var result=document.getElementById("result")
+        result.innerHTML="Firstname= "+first_name+"<br> Lastname= "+last_name+"<br> Gender= "+gender+"<br> Language selceted= "+language+"<br> Platform= "+platform;
+    }
+
+</script>

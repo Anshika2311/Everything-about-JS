@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>ADD/REMOVE</title>
+</head>
+<body>
+    
+    <div id="main-div">
+
+        <h1>H1</h1>
+        <h1>h1</h1>
+        <h1 id="h1extra">Extra h1</h1>
+
+    </div>
+</body>
+</html>
+<script>
+    $("#main-div").append("<h1>3rd h1</h1>")
+    $("#h1extra").remove()
+</script>

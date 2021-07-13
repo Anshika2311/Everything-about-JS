@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>User Authentication</title>
+    <style>
+
+        body{
+            background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            height:100vh;
+        }
+        
+        .row-info{
+            display: flex;
+            justify-content: center;
+        }
+
+        .col-md-4{
+            margin-top:200px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+            background-blend-mode: multiply,multiply;
+            padding:20px;
+            border-radius: 10px;
+        }
+
+        input{
+            margin-top:10px;
+        }
+
+    </style>
+</head>
+
+<body>
+        <div class="row row-info">
+            <div class="col-md-4 text-center">
+                <h1 class="text-center">Authentication</h1>
+                <form onsubmit="validate()">
+                    <input type="text" placeholder="username" class="form-control" id="username">
+                    <input type="text" placeholder="password" class="form-control" id="password">
+                    <input type="submit" value="login" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    
+</body>
+</html>
+<script>
+    function validate(){
+        var username= document.getElementById("username").value
+        var password=document.getElementById("password").value;
+        if(username=="Anshika" && password=="Maheshwari"){
+            alert("login successfully")
+        }
+        else{
+            alert("invalid login credentials")
+        }
+    }
+</script>

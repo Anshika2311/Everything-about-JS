@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection List</title>
+</head>
+<body>
+    
+    <h1 id="result">Movie Name.... </h1>
+    <select id="movie" onChange="changed()">
+        <option value="Joker">Joker</option>
+        <option value="Iron Man">Iron Man</option>
+        <option value="Tenet">Tenet</option>
+    </select>
+</body>
+</html>
+<script>
+  
+    function changed()
+    {
+        var movie=document.getElementById("movie").value;
+        document.getElementById("result").innerHTML=movie;
+    }
+</script>

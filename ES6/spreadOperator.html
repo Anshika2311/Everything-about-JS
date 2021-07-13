@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    
+    <script>
+
+        var numbers=[2,5,8,3,9]
+
+        // numbers.push(0)
+        // numbers.unshift(5)
+
+        var numbers2=[5,9,2,4,6]
+
+        numbers=[...numbers,1]
+        numbers=[6,...numbers]
+
+        var numbers3=[...numbers,...numbers2]
+
+        // for(num of numbers){
+        //     document.write(num+"<br>")
+        // }
+        
+        for(num1 of numbers3){
+            document.write(num1+"<br>")
+        }
+
+    </script>
+
+</body>
+</html>
